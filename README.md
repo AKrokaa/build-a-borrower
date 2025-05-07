@@ -9,3 +9,10 @@ This is my first web project, and I’m learning as I go! I leaned heavily on Ch
 ## 🌱 What is a Borrower?
 
 ---
+
+## 🎨 Art & Attribution
+
+All art assets are lovingly illustrated by [**Pocketwithfrog**](https://pocketwithfrog.com/).  
+Please support their work and explore more of the **Glimmerveil** universe through their site!
+
+---
