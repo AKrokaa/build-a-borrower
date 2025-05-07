@@ -1,0 +1,29 @@
+{
+    "categories": {
+        "body": ["feral_body", "normal_body"],
+        "markings": ["feral_h", "feral_ombre", "feral_patchy", "feral_stripes", "normal_h", "normal_ombre", "normal_patchy", "normal_stripes"],
+        "skin": ["skin_1", "skin_2", "skin_3", "skin_4", "skin_5", "skin_6", "skin_7"],
+        "tails": ["bob", "long", "medium", "thick", "thin"],
+        "tail_markings": ["bob_bottom", "bob_top", "long_h", "long_ombre", "long_stripe", "long_tip", "medium_h", "medium_ombre", "medium_stripe", "medium_tip", "thick_h", "thick_ombre", "thick_stripe", "thin_ombre", "thin_spots", "thin_stripes"],
+        "eyes": ["eye1", "eye2", "eye3", "eye4", "eye5"],
+        "mouths": ["grin", "pout", "smile"],
+        "ears": ["big", "bun", "cat", "fox", "lop", "mouse"],
+        "hair": ["long", "messy", "pigtails", "fluffy", "swoop"],
+        "bangs": ["hime", "messy", "chunky", "part", "prince", "framed"],
+        "hair_highlights": ["long_h", "long_ombre", "long_split", "long_streak", "messy_h", "messy_ombre", "messy_split", "messy_streak", "pigtails_h", "pigtails_ombre", "pigtails_split", "pigtails_streak", "fluffy_h", "fluffy_ombre", "fluffy_split", "fluffy_streak", "swoop_h", "swoop_ombre", "swoop_split", "swoop_streak"],
+        "accessories_1": ["horns", "horns2"],
+        "accessories_2": ["bells", "button", "collar", "ribbon"]
+  
+    },
+    "dependencies": {
+        "tail_markings": "tails",
+        "hair_highlights": "hair",
+        "markings": "body"
+    },
+    "colors": {
+        "eyes": []
+    },
+    "layers": ["tails", "tail_markings", "skin", "body", "markings", "eyes", "mouths", "ears", "accessories_2", "bangs", "hair", "hair_highlights", "accessories_1"]
+}
+
+  

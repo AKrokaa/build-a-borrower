@@ -1,0 +1,277 @@
+/* Variables */
+:root {
+  --primary-green: #88b378;
+  --light-green: #eaf5ea;
+  --dark-green: #2e7031;
+  --off-white: #f9fdf9;
+}
+
+/* Global Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #a8d5a2, #e6f2e6);
+  background-attachment: fixed;
+  color: #2f4f2f;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Avatar Container */
+.avatar-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  z-index: 1;
+}
+
+.avatar-container {
+  background: var(--off-white);
+  border: 4px solid var(--primary-green);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  aspect-ratio: 1678 / 2497;
+  overflow: hidden;
+  position: relative;
+}
+
+.avatar-container img {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Color Palette */
+.color-palette {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.color-swatch {
+  border: 2px solid #888;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+}
+
+/* Tabs */
+.tabs-wrapper {
+  margin: 30px auto 20px;
+  position: relative;
+  width: 340px;
+}
+
+.tabs {
+  background: var(--light-green);
+  border-radius: 10px;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-button {
+  background: #cfe7cf;
+  border: none;
+  border-radius: 10px;
+  color: var(--dark-green);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 6px 12px;
+  white-space: nowrap;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background: var(--primary-green);
+  color: white;
+}
+
+/* Scroll Arrows */
+.scroll-arrow {
+  background: none;
+  border: none;
+  color: var(--dark-green);
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scroll-arrow:first-of-type {
+  left: -30px;
+}
+
+.scroll-arrow:last-of-type {
+  right: -30px;
+}
+
+/* Tab Content */
+.tab-content {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 20px;
+  padding: 12px;
+  width: 340px;
+}
+
+.tab-content.active {
+  display: flex;
+}
+
+/* Thumbnails */
+.thumbnail {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 64px;
+  margin: 4px;
+  transition: border 0.3s ease, transform 0.3s ease;
+  width: 64px;
+}
+
+.thumbnail:hover {
+  border-color: var(--dark-green);
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.download-button,
+.random-button {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 14px 28px;
+  transition: background 0.3s;
+}
+
+.download-button {
+  background: var(--dark-green);
+}
+
+.download-button:hover {
+  background: #245725;
+}
+
+.random-button {
+  background: var(--primary-green);
+}
+
+.random-button:hover {
+  background: #6f9a5a;
+}
+
+/* Falling Leaves */
+.leaf {
+  animation: fallAndSway linear infinite;
+  background: url('assets/leaf.png') no-repeat center/contain;
+  height: 24px;
+  opacity: 0.8;
+  pointer-events: none;
+  position: fixed;
+  top: -40px;
+  width: 24px;
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes fallAndSway {
+  0% {
+      opacity: 0;
+      transform: translateX(0) translateY(-40px) rotate(0deg);
+  }
+  10% {
+      opacity: 1;
+  }
+  50% {
+      transform: translateX(15px) translateY(50vh) rotate(180deg);
+  }
+  100% {
+      opacity: 0;
+      transform: translateX(0) translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .avatar-wrapper,
+  .tabs-wrapper,
+  .tab-content {
+      width: 90vw;
+  }
+
+  .color-palette {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10px;
+      position: static;
+      transform: none;
+  }
+
+  .scroll-arrow {
+      display: none;
+  }
+}
+
+.tab-content .thumbnail {
+  width: 64px;
+  height: 64px;
+  background: var(--off-white);
+}
+
+/* Hide any “none.png” layers in the preview */
+.avatar-container img[src$="none.png"] {
+  display: none;
+}

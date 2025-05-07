@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build-A-Borrower</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Build-A-Borrower</h1>
+<div class="avatar-wrapper">
+    <div class="avatar-container" id="avatarContainer"></div>
+    <div class="color-palette" id="colorPalette"></div>
+</div>
+    <div class="tabs-wrapper">
+        <button class="scroll-arrow" onclick="scrollTabs(-1)">&#8592;</button>
+        <div class="tabs" id="tabs">
+          </div>
+        <button class="scroll-arrow" onclick="scrollTabs(1)">&#8594;</button>
+    </div>
+    <div id="tabContents"></div>
+    <div class="buttons-wrapper">
+        <button class="random-button" onclick="randomizeAvatar()">Random</button>
+        <button class="download-button" onclick="downloadAvatar()">Download Borrower</button>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
