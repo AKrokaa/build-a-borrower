@@ -275,3 +275,67 @@ h1 {
 .avatar-container img[src$="none.png"] {
   display: none;
 }
+
+.footer-note {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 1000;
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+}
+
+.footer-label {
+  background: rgba(255, 255, 255, 0.85);
+  color: #2e7031;
+  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+.footer-popup {
+  display: none;
+  position: absolute;
+  bottom: 36px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #4b6b4b;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  text-align: left;
+  font-size: 0.8rem;
+  pointer-events: auto;
+}
+
+.footer-popup a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-popup a:hover {
+  text-decoration: underline;
+}
+
+/* Show popup on hover or focus */
+.footer-note:hover .footer-popup,
+.footer-note:focus-within .footer-popup {
+  display: block;
+}
+
+/* Small screen tweaks */
+@media (max-width: 400px), (max-height: 500px) {
+  .footer-popup {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
