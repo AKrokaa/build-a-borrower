@@ -23,7 +23,7 @@
     "colors": {
         "eyes": []
     },
-    "layers": ["tails", "tail_markings", "skin", "body", "markings", "eyes", "mouths", "ears", "accessories_2", "bangs", "hair", "hair_highlights", "accessories_1"]
+    "layers": ["tails", "tail_markings", "ears", "accessories_1", "skin", "body", "markings", "eyes", "mouths", "hair", "hair_highlights", "bangs", "accessories_2"]
 }
 
   
